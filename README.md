@@ -2,15 +2,15 @@
 
 A curated collection of production-grade, open-source sample agents designed for benchmarking, multi-turn testing, and evaluation with [Halios](https://halios.ai).
 
-Each sample agent in this repository is self-contained, brand-sanitized, and comes with zero-friction setup instructions, mock business tools, and reproducible datasets.
+Each sample agent in this repository is self-contained and comes with complete setup instructions, mock business tools, and reproducible datasets.
 
 ---
 
 ## 📂 Available Agents
 
-| Agent | Category | Description | Search / Data Backend | Quickstart |
+| Agent | Category | Description | Data Backend | Quickstart |
 | :--- | :--- | :--- | :--- | :--- |
-| [**`demo-shopper-agent`**](./demo-shopper-agent) | E-commerce / Sales | Conversational furniture sales assistant with tool calling for customer verification, session tracking, and catalog search. | In-memory BM25 over sanitized `products.csv` | [`demo-shopper-agent/README.md`](./demo-shopper-agent/README.md) |
+| [**`demo-shopper-agent`**](./demo-shopper-agent) | E-commerce / Sales | Conversational furniture sales assistant with tool calling for customer verification, session tracking, and catalog search. | In-memory BM25 over `products.csv` | [`demo-shopper-agent/README.md`](./demo-shopper-agent/README.md) |
 
 ---
 
@@ -35,14 +35,19 @@ python agent.py
 
 ---
 
-## 🧪 Evaluating Agents with Halios
+## 🧪 Get Started with Agent Evaluation
 
-All sample agents in this repository can be instrumented and evaluated using the **Halios SDK** and **Halios Agent Evaluation Harness**:
+Evaluate any sample agent in this repository using **Halios**:
 
-* Multi-turn conversational simulation
-* Business rule adherence and guardrail verification
-* Tool calling accuracy and session lifecycle validation
-* Latency, cost, and hallucination metrics
+1. **Clone this repository / agent folder** to your workspace.
+2. **Open the agent in your AI coding agent** (Claude Code, Cursor, Copilot, Antigravity, etc.) and paste this prompt:
+   ```text
+   Run npx skills add HaliosAI/halios --skill halios, then use the Halios skill to set up evals for this agent.
+   ```
+3. **Learn about evaluation concepts**: [Halios Evaluation Concepts](https://docs.halios.ai/concepts/evaluation-concepts)
+4. **Prompting & Eval Cookbook**: Explore what you can test and build with the [Halios Prompting Guide & Cookbook](https://docs.halios.ai/prompts/prompting-guide).
+5. **Evaluation Scenarios & Checks**: Learn how to design multi-turn simulation scenarios and rubric checks: [Halios Evaluation Types](https://docs.halios.ai/evaluation/eval-types).
+6. **Further Reading**: [Demystifying Evals for AI Agents (Anthropic Engineering)](https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents).
 
 ---
 
