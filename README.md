@@ -11,6 +11,7 @@ Each sample agent in this repository is self-contained and comes with complete s
 | Agent | Category | Description | Data Backend | Quickstart |
 | :--- | :--- | :--- | :--- | :--- |
 | [**`demo-shopper-agent`**](./demo-shopper-agent) | E-commerce / Sales | Conversational furniture sales assistant with tool calling for customer verification, session tracking, and catalog search. | In-memory BM25 over `products.csv` | [`demo-shopper-agent/README.md`](./demo-shopper-agent/README.md) |
+| [**`demo-rag-agent`**](./demo-rag-agent) | Research / Knowledge QA | Grounded RAG assistant with hybrid retrieval (Vector + BM25 with RRF), strict citation attribution, and anti-hallucination guardrails. | Hybrid Vector + BM25 over Markdown corpus | [`demo-rag-agent/README.md`](./demo-rag-agent/README.md) |
 
 ---
 
@@ -19,7 +20,8 @@ Each sample agent in this repository is self-contained and comes with complete s
 Navigate to any agent subdirectory to get started:
 
 ```bash
-cd demo-shopper-agent
+cd demo-rag-agent
+# or: cd demo-shopper-agent
 
 # Create virtual environment & install dependencies
 python3 -m venv .venv
