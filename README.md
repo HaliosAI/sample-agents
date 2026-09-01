@@ -1,34 +1,43 @@
 # Halios Sample Agents
 
-Example AI agents for trying scenario-based, multi-turn evaluations with
-[Halios](https://halios.ai).
+Sample agents you can use to try [Halios](https://halios.ai).
 
-Each example is self-contained and includes setup instructions, mock business tools, and local
-data so you can inspect the agent, create realistic scenarios, and run fresh evaluation trials.
+Each example is a runnable agent with enough realistic behavior, tools, and failure modes to build a useful evaluation suite around it.
 
-## Available Agents
+## Agents
 
 | Agent | What it demonstrates |
-| :--- | :--- |
-| [**`demo-shopper-agent`**](./demo-shopper-agent) | A conversational furniture sales agent with customer verification, session tracking, catalog search, and tool calling. |
-| [**`demo-rag-agent`**](./demo-rag-agent) | A grounded RAG assistant with hybrid retrieval, citation attribution, and anti-hallucination guardrails. |
+| --- | --- |
+| [`demo-shopper-agent`](./demo-shopper-agent) | A furniture sales agent with identity verification, catalog search, session state, and multi-step tool use. |
+| [`demo-rag-agent`](./demo-rag-agent) | A RAG assistant with hybrid retrieval, citation attribution, and grounded-answer requirements. |
 
-## Try an Evaluation
+## Try Halios
 
-1. Clone this repository and open an agent directory in Codex, Claude Code, Cursor, or another
-   coding agent.
-2. Give your coding agent this prompt:
+Clone the repository:
 
-   ```text
-   Run npx skills add HaliosAI/halios --skill halios, then use the Halios skill to set up evals for this agent.
-   ```
+```bash id="kw1uhm"
+git clone https://github.com/HaliosAI/sample-agents.git
+cd sample-agents/demo-shopper-agent
+```
 
-The Halios skill will inspect the agent and help you create scenarios and checks before running a
-bounded smoke evaluation.
+Follow the agent's README to install its dependencies and run it locally.
 
-See each agent's README for local setup, or read the
-[Halios documentation](https://docs.halios.ai) for evaluation concepts and workflows.
+Then add the Halios skill:
+
+```bash id="48ss0j"
+npx skills add HaliosAI/halios --skill halios
+```
+
+Open the agent directory in Codex, Claude Code, Cursor, or another coding agent and prompt:
+
+```text id="8ekn73"
+Set up evals for this agent.
+```
+
+Your coding agent can use Halios to create scenarios and checks, run evaluations, and investigate failures based on the agent's actual behavior.
+
+See the [Halios documentation](https://docs.halios.ai) for more examples and workflows.
 
 ## License
 
-MIT License. Free to use, adapt, and benchmark.
+MIT License. Free to use, modify, and benchmark.
